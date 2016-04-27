@@ -62,7 +62,7 @@ public class MovieService {
 
 
                     Movie movie = new Movie(movieName, moviePoster);
-
+                    movies.add(movie);
 
                 }
             }

@@ -27,9 +27,9 @@ public class Movie {
 //        this.mActors = actors;
 //    }
 //
-//    public String getMovieName() {
-//        return mMovieName;
-//    }
+    public String getMovieName() {
+        return mMovieName;
+    }
 //    public String getMoviePoster() {
 //        return mMoviePoster;
 //    }
