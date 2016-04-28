@@ -6,11 +6,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.epicodus.mymoviefinder.R;
 import com.epicodus.mymoviefinder.models.Movie;
 import com.epicodus.mymoviefinder.ui.MovieDetailActivity;
+import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
@@ -24,6 +26,8 @@ import info.movito.themoviedbapi.model.MovieList;
  * Created by Guest on 4/27/16.
  */
 public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.MovieViewHolder> {
+    private static final int MAX_WIDTH= 400;
+    private static final int MAX_HEIGHT = 300;
     private ArrayList<Movie> mMovies = new ArrayList<>();
     private Context mContext;
 
@@ -51,6 +55,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
 
     public class MovieViewHolder extends RecyclerView.ViewHolder {
         @Bind(R.id.movieTitleTextView) TextView mMovieTitleTextView;
+        @Bind(R.id.movieImageView) ImageView mMovieImageView;
         private Context mContext;
 
         public MovieViewHolder(View itemView) {
@@ -73,6 +78,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
         }
 
         public void bindMovie(Movie movie) {
+            Picasso.with(mContext).load(movie.getMoviePoster()).resize(MAX_WIDTH, MAX_HEIGHT).into(mMovieImageView);
             mMovieTitleTextView.setText(movie.getMovieName());
         }
 

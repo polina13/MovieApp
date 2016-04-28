@@ -20,7 +20,7 @@ public class Movie {
 
     public Movie(String mMovieName, String mMoviePoster) {
         this.mMovieName = mMovieName;
-        this.mMoviePoster = mMoviePoster;
+        this.mMoviePoster = "http://image.tmdb.org/t/p/w500" + mMoviePoster;
     }
 
 
@@ -46,5 +46,10 @@ public class Movie {
 //    }
 //    public ArrayList<String> getActors() {
 //        return mActors;
+//    }
+
+//    public String getLargePoster(String moviePoster) {
+//        String largePoster = moviePoster.substring(2, moviePoster.length() - 6).concat("o.jpg");
+//        return largePoster;
 //    }
 }

@@ -22,16 +22,15 @@ import butterknife.ButterKnife;
  * A simple {@link Fragment} subclass.
  */
 public class MovieDetailFragment extends Fragment {
+    private static final int MAX_WIDTH= 400;
+    private static final int MAX_HEIGHT = 300;
+    @Bind(R.id.movieImageView) ImageView mMovieImageView;
     @Bind(R.id.movieTitleTextView) TextView mMovieName;
-    @Bind(R.id.movieImageView) ImageView mMoviePoster;
     @Bind(R.id.saveMovieButton) TextView mSaveMovieButton;
 
     private Movie mMovie;
 
 
-    public MovieDetailFragment() {
-        // Required empty public constructor
-    }
 
     public static MovieDetailFragment newInstance(Movie movie) {
         MovieDetailFragment movieDetailFragment = new MovieDetailFragment();
@@ -51,8 +50,9 @@ public class MovieDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_movie_detail, container, false);
         ButterKnife.bind(this, view);
+        Picasso.with(view.getContext()).load(mMovie.getMoviePoster()).resize(MAX_WIDTH, MAX_HEIGHT).centerCrop().into(mMovieImageView);
         mMovieName.setText(mMovie.getMovieName());
-        return inflater.inflate(R.layout.fragment_movie_detail, container, false);
+        return view;
     }
 
 }

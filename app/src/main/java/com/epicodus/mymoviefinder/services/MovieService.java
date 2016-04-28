@@ -60,7 +60,6 @@ public class MovieService {
                     String movieName = basicInfoJSON.getString("original_title");
                     String moviePoster = basicInfoJSON.getString("poster_path");
 
-
                     Movie movie = new Movie(movieName, moviePoster);
                     movies.add(movie);
 
