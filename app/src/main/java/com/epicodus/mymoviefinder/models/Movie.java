@@ -1,17 +1,22 @@
 package com.epicodus.mymoviefinder.models;
 
+import org.parceler.Parcel;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
  * Created by Guest on 4/27/16.
  */
+@Parcel
 public class Movie {
-    private String mMovieName;
-    private String mMoviePoster;
+    String mMovieName;
+    String mMoviePoster;
 //    private String mMovieSynopsis;
 //    private String mMovieDirector;
 //    private ArrayList<String> mActors = new ArrayList<>();
+
+    public Movie() {}
 
     public Movie(String mMovieName, String mMoviePoster) {
         this.mMovieName = mMovieName;
@@ -30,9 +35,9 @@ public class Movie {
     public String getMovieName() {
         return mMovieName;
     }
-//    public String getMoviePoster() {
-//        return mMoviePoster;
-//    }
+    public String getMoviePoster() {
+        return mMoviePoster;
+    }
 //    public String getMovieSynopsis() {
 //        return mMovieSynopsis;
 //    }

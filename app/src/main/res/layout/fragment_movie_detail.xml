@@ -14,7 +14,7 @@ tools:context="com.epicodus.mymoviefinder.ui.MovieDetailFragment">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:id="@+id/restaurantImageView"
+        android:id="@+id/movieImageView"
         android:src="@drawable/ic_picture_in_picture_white_24dp"
         android:scaleType="centerCrop" />
 
