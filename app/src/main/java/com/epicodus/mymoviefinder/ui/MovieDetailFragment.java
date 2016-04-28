@@ -29,9 +29,9 @@ public class MovieDetailFragment extends Fragment {
     private Movie mMovie;
 
 
-//    public MovieDetailFragment() {
-//        // Required empty public constructor
-//    }
+    public MovieDetailFragment() {
+        // Required empty public constructor
+    }
 
     public static MovieDetailFragment newInstance(Movie movie) {
         MovieDetailFragment movieDetailFragment = new MovieDetailFragment();
@@ -52,7 +52,7 @@ public class MovieDetailFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_movie_detail, container, false);
         ButterKnife.bind(this, view);
         mMovieName.setText(mMovie.getMovieName());
-        return inflater.inflate(R.layout.fragment_movie_detail2, container, false);
+        return inflater.inflate(R.layout.fragment_movie_detail, container, false);
     }
 
 }
