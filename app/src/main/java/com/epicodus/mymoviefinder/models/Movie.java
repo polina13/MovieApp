@@ -49,7 +49,11 @@ public class Movie {
 //    }
 
 //    public String getLargePoster(String moviePoster) {
-//        String largePoster = moviePoster.substring(2, moviePoster.length() - 6).concat("o.jpg");
+//        String largePoster = moviePoster.substring(0, moviePoster.length() - 2);
 //        return largePoster;
 //    }
 }
+
+//Independent Project
+
+//GEOLOCATION API_KEY = "AIzaSyBLVqDQva_lI9OFNWUfjSeKc6IWHffXt-Y"
